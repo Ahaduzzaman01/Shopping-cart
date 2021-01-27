@@ -25,7 +25,7 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <button id="firstMinusButton" class="btn btn-default"><i class="fas fa-minus"></i></button>
                            <input id="currentItemValue" type="text" class="form-control text-center" value="1">
                            <button id="firstPlusButton" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
@@ -79,16 +79,24 @@
    </section>
 
    <script>
-   const plusBtn = document.getElementById("firstPlusButton");
-   plusBtn.addEventListener("click", function(){
-      const itemAmount = document.getElementById("currentItemValue").value;
-      const itemNumber = parseInt(itemAmount);
-      // console.log(itemNumber); this line only for checking 
-      
-      const totalItem = itemNumber + 1;
-      console.log(totalItem);
-      
-   })
+      // this para is for plus button
+      const plusBtn = document.getElementById("firstPlusButton");
+      plusBtn.addEventListener("click", function () {
+         const itemAmount = document.getElementById("currentItemValue").value;
+         const itemNumber = parseInt(itemAmount);
+         const totalItem = itemNumber + 1;
+         document.getElementById("currentItemValue").value = totalItem;
+      })
+
+
+      // this para is for minus button
+      const minusBtn = document.getElementById("firstMinusButton");
+      minusBtn.addEventListener("click", function(){
+         const minusItemAmount = document.getElementById("currentItemValue").value;
+         const minusItemNumber = parseInt(minusItemAmount);
+         const minusItem = minusItemNumber - 1;
+         document.getElementById("currentItemValue").value = minusItem;
+      })
    </script>
 
 </body>
