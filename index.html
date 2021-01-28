@@ -48,7 +48,7 @@
                            <button id="case-increase" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5 id="casePrice" >$59</h5>
+                        <h5 id="case-total" >$59</h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -85,7 +85,7 @@
          const caseNewCount = caseCount + 1;
          caseInput.value = caseNewCount;
          const caseTotal = caseNewCount * 59;
-         document.getElementById("casePrice").innerText = "$" + caseTotal;
+         document.getElementById("case-total").innerText = "$" + caseTotal;
       })
 
       // case decrease button
@@ -95,8 +95,7 @@
          const caseNewCount = caseCount - 1;
          caseInput.value = caseNewCount;
          const caseTotal = caseNewCount * 59;
-         document.getElementById("casePrice").innerText = "$" + caseTotal;
-      
+         document.getElementById("case-total").innerText = "$" + caseTotal;
       })
    </script>
 </body>
